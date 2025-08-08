@@ -70,7 +70,7 @@ const AboutUs = () => {
               <div className="leader-spotlight">
                 <img src="images/image.png" alt="General Overseer" />
                 <div className="info">
-                  <h3>Apostle Elias Emmanuel & Mrs. Mary Elias</h3>
+                  <h3>Apostle and Pst Mrs. Marry Elias Emmanuel</h3>
                   <p>General Overseer</p>
                 </div>
               </div>
