@@ -1,0 +1,8 @@
+         <a href="#" className="nav-link">Home</a>
+          <a href="#" className="nav-link">About</a>
+          <a  href="#welcome" className="nav-link">Ministries</a>
+          <a href="#" className="nav-link">Sermons</a>
+          <a href="#" className="nav-link">Events</a>
+          <a href="#" className="nav-link">Contact</a>
+
+          

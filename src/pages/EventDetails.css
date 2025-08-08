@@ -1,0 +1,41 @@
+.event-details {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-details h2 {
+  color: #065f46;
+}
+
+.event-flier {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+.event-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.event-actions button {
+  background-color: #065f46;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.event-actions button:hover {
+  background-color: #047857;
+}

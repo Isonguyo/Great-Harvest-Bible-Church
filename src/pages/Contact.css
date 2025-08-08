@@ -1,0 +1,132 @@
+.contact-section {
+  background: #f9fafb;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #065f46;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #374151;
+  margin-bottom: 40px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: #374151;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #065f46;
+  font-size: 20px;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d97706;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #065f46;
+  outline: none;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+/* Contact Info Boxes */
+.copy-box {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #065f46;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.copy-box button {
+  background: none;
+  border: none;
+  color: #065f46;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.copy-box button:hover {
+  color: #d97706;
+}
+
+/* Success/Copy Alert */
+.copy-alert {
+  background: #16a34a; /* Proper green */
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}

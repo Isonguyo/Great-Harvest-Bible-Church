@@ -1,0 +1,147 @@
+/* Container */
+.header-container {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Inner Flex */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+/* Logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  height: 50px;
+}
+.logo-text {
+  font-weight: bold;
+  color: #065f46;
+  font-size: 18px;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #065f46;
+  font-weight: 500;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #d97706;
+  transition: width 0.3s ease-in-out;
+}
+.nav-links li a:hover {
+  color: #d97706;
+}
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Give Button */
+.give-btn a {
+  background-color: #fbbf24;
+  color: white;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.give-btn a:hover {
+  background-color: #d97706;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #065f46;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+.mobile-menu.show {
+  display: flex;
+}
+.mobile-menu a {
+  text-decoration: none;
+  color: #065f46;
+  font-size: 18px;
+  padding: 12px 0;
+  font-weight: 500;
+}
+.mobile-menu .mobile-give {
+  background: #fbbf24;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .give-btn {
+    display: none;
+  }
+  .hamburger {
+    display: flex; /* SHOW the hamburger on small screens */
+  }
+}

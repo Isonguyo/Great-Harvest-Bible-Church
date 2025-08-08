@@ -1,0 +1,51 @@
+.verse-text::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Buttons */
+.share-btn {
+  background: #fbbf24;
+  color: #1f2937;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.share-btn:hover {
+  background: #d97706;
+  color: #fff;
+}
+
+/* Success Alert */
+.copy-alert {
+  background: #16a34a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-size: 14px;
+  display: inline-block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+

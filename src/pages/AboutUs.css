@@ -1,0 +1,308 @@
+/* Hero Section */
+.about-hero {
+  background: url("images/ghbc25.jpg") center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+.about-hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.5rem;
+}
+
+/* Glass Effect Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Featured Leaders */
+.featured-leaders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.leader-spotlight {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leader-spotlight img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.leader-spotlight .info {
+  padding: 20px;
+}
+
+.leader-spotlight h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.leader-secondary {
+  width: 100%;
+  max-width: 500px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.leader-secondary img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.leader-secondary .info {
+  padding: 20px;
+}
+
+/* Other Leaders Grid */
+.leaders-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.small-card {
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.small-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.view-btn {
+  background: #fbbf24;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #e0a616;
+}
+
+/* ---------- Global About Page Styles ---------- */
+.about-section {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background: #f9fafb;
+}
+
+/* Section Titles */
+.section-title,
+.history h2,
+.beliefs h2,
+.mission-vision h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after,
+.history h2::after,
+.beliefs h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #fbbf24;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Paragraph Styling */
+.about-content p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* History Section */
+.history {
+  padding: 50px 0;
+  background: #fff;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.history p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #374151;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.mission-vision .card h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.mission-vision .card p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Beliefs Section */
+.beliefs {
+  padding: 50px 0;
+  background: #f3f4f6;
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.beliefs h2 {
+  text-align: center;
+}
+
+.beliefs ul {
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.beliefs li {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #fbbf24;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #fff;
+  padding: 60px 30px;
+  border-radius: 12px;
+  margin: 50px 0;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #1f2937;
+  color: #fff;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #111827;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title,
+  .history h2,
+  .beliefs h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leader-spotlight img {
+    height: 250px;
+  }
+
+  .leader-secondary img {
+    height: 200px;
+  }
+}

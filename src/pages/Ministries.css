@@ -1,0 +1,41 @@
+/* Ministries card */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.bg-white {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers image horizontally */
+  justify-content: flex-start;
+  text-align: center;
+  padding: 1rem;
+}
+
+.section-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Initial State */
+.ministry-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+
+/* Show when in view */
+.ministry-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}

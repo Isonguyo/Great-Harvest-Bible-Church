@@ -1,0 +1,256 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9fafb;
+}
+
+/* Hero Section */
+.children-hero-section {
+  background: linear-gradient(to right, rgba(6,95,70,0.8), rgba(13,148,136,0.8)),
+    url('images/child52.jpg') center/cover no-repeat;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.children-overlay {
+  padding: 25px;
+}
+
+.children-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+.children-subtitle {
+  font-size: 1.3rem;
+  margin-top: 5px;
+  font-weight: 400;
+  animation: fadeInUp 1s ease;
+}
+
+/* Main Container */
+.children-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.children-h2 {
+  color: #065f46;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.children-h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #d97706;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+/* Sections */
+.section, .children-about {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.section:hover, .children-about:hover {
+  transform: translateY(-5px);
+}
+
+/* Gallery - Pinterest Style */
+.gallery-grid {
+  column-count: 3;
+  column-gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: floatIn 0.8s forwards ease-in-out;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  break-inside: avoid;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Gallery */
+@media (max-width: 992px) {
+  .gallery-grid {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-grid {
+    column-count: 1;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  background: #065f46;
+  color: white;
+  padding: 14px 22px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #047857;
+}
+
+.btn-secondary {
+  background: #d97706;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #b45309;
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Lightbox Overlay */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Lightbox Content */
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #d97706;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #b45309;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #f87171;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.close-btn:hover {
+  background: #dc2626;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Title */
+@media (max-width: 768px) {
+  .children-title {
+    font-size: 2rem;
+  }
+}
