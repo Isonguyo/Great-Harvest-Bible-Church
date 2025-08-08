@@ -19,7 +19,7 @@ const sermons = [
     text: "Dueteronomy 15:11",
     verse: "When you give to the poor, you lend to the Lord, and He will repay you.",
     duration: "9 min",
-    img: "https://aicdn.picsart.com/249809ad-acb3-4163-a7b8-fcf62a933dc3.png",
+    img: "images/ghbc23.jpg",
     video: "videos/Giving-to-the-needy.mp4",
     audio: "audios/Giving-to-the-needy.mp3"
   },
