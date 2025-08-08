@@ -83,23 +83,24 @@ const BibleVerse = () => {
     setTimeout(() => setCopyMessage(""), 2000);
   };
 
-  // Share API
-  const shareVerse = async () => {
-    const fullText = `${verseText} — ${reference}`;
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: "Daily Bible Verse",
-          text: fullText,
-          url: window.location.href
-        });
-      } catch (err) {
-        console.error("Error sharing:", err);
-      }
-    } else {
-      alert("Sharing not supported on this browser. Please copy instead.");
+// Share API
+const shareVerse = async () => {
+  const fullText = `${verseText} — ${reference}`;
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: "Daily Bible Verse",
+        text: fullText
+        // Removed: url: window.location.href
+      });
+    } catch (err) {
+      console.error("Error sharing:", err);
     }
-  };
+  } else {
+    alert("Sharing not supported on this browser. Please copy instead.");
+  }
+};
+
 
   return (
     <section ref={verseRef} className="py-16 bg-green-800 text-white">
