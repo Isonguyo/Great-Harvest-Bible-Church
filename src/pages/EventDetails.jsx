@@ -16,23 +16,26 @@ const EventDetails = () => {
     link.click();
     document.body.removeChild(link);
   };
+const shareVerseImage = async () => {
+  try {
+    const imageUrl = "/images/verseImage.jpg"; // replace with your image path
+    const response = await fetch(imageUrl);
+    const blob = await response.blob();
+    const file = new File([blob], "verse.jpg", { type: blob.type });
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: "Healing Convention",
-          text: "Join me for the Healing Convention – 25th to 31st September, Morning & Evening sessions.",
-          url: eventURL,
-        });
-        console.log("Shared successfully");
-      } catch (error) {
-        console.error("Error sharing:", error);
-      }
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        files: [file],
+        title: "Daily Bible Verse"
+      });
     } else {
-      alert("Sharing not supported on this browser. Please copy the link to share.");
+      alert("Sharing images is not supported on this device/browser.");
     }
-  };
+  } catch (err) {
+    console.error("Error sharing image:", err);
+  }
+};
+
 
   return (
     <>
@@ -48,7 +51,8 @@ const EventDetails = () => {
 
         <div className="event-actions">
           <button onClick={handleDownload}>Download Flier</button>
-          <button onClick={handleShare}>📤 Share Event</button>
+         <button onClick={shareVerseImage}>Share</button>
+
         </div>
       </div>
       <WhatsAppButton />
