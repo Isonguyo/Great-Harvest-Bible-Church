@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Header.css';
+import "./Header.css";
 import { HashLink as Link } from "react-router-hash-link";
 
 const Header = () => {
@@ -21,7 +21,7 @@ const Header = () => {
           <span className="logo-text">Great Harvest Bible Church</span>
         </div>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <ul className="nav-links">
           <li><Link smooth to="/#home">Home</Link></li>
           <li><Link smooth to="/about">About</Link></li>
@@ -36,10 +36,11 @@ const Header = () => {
           <Link smooth to="/#give">Give Online</Link>
         </div>
 
-        {/* Hamburger */}
+        {/* Hamburger Icon */}
         <button
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={toggleMenu}
+          aria-label="Toggle Menu"
         >
           <span></span>
           <span></span>
@@ -64,4 +65,3 @@ const Header = () => {
 };
 
 export default Header;
-
