@@ -16,25 +16,80 @@ const fullCalendar = [
 
 const TopBar = () => {
   const [announcement, setAnnouncement] = useState("");
+  const flierImage = "/images/healing-convention.jpg"; // your actual image path
 
   useEffect(() => {
     const today = new Date();
     const currentMonth = today.toLocaleString("en-US", { month: "long" });
     const currentDay = today.getDate();
 
-    // Find upcoming event
     const upcomingEvent = fullCalendar.find((event) => {
       if (event.month === currentMonth) {
-        const eventDay = parseInt(event.date); // extract first number
-        return eventDay >= currentDay; // future event in this month
+        const eventDay = parseInt(event.date); 
+        return eventDay >= currentDay;
       }
       return false;
     });
 
-    // If none found in current month, show the first future event
     if (upcomingEvent) {
       setAnnouncement(
         `📢 Upcoming: ${upcomingEvent.title} on ${upcomingEvent.date} ${upcomingEvent.month}  ${upcomingEvent.time || "TBA"}`
+      );
+    } else {
+      const nextEvent = fullCalendar.find((event) => event.month !== currentMonth);
+      if (nextEvent) {
+        setAnnouncement(
+          `📢 Upcoming: ${nextEvent.title} on ${nextEvent.date} ${nextEvent.month}  ${nextEvent.time || "TBA"}`
+        );
+      }
+    }
+  }, []);
+
+  const handleShare = async () => {
+    try {
+      if (navigator.canShare && navigator.canShare({ files: [] })) {
+        const response = await fetch(flierImage);
+        const blob = await response.blob();
+        const file = new File([blob], "event-flier.jpg", { type: blob.type });
+
+        await navigator.share({
+          title: "Great Harvest Bible Church Event",
+          text: announcement + "\nJoin us for this life-changing event!",
+          files: [file],
+        });
+      } else {
+        // Fallback: copy link to clipboard
+        await navigator.clipboard.writeText(window.location.origin + "/event-details");
+        alert("Sharing not supported on this device. Event link copied to clipboard!");
+      }
+    } catch (error) {
+      console.error("Error sharing", error);
+    }
+  };
+
+  return (
+    <div className="top-bar">
+      <div className="top-bar-container">
+        <div className="announcement">
+          <span>{announcement || "Stay tuned for upcoming events!"}</span>
+        </div>
+        <div className="event-button">
+          <a href="/event-details" className="btn-view-event">View Event</a>
+        </div>
+        <div className="social-links">
+          <a href="https://www.facebook.com/GHBCCalabar" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <button onClick={handleShare} className="btn-share">
+            📤 Share
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TopBar;        `📢 Upcoming: ${upcomingEvent.title} on ${upcomingEvent.date} ${upcomingEvent.month}  ${upcomingEvent.time || "TBA"}`
       );
     } else {
       const nextEvent = fullCalendar.find((event) => event.month !== currentMonth);
