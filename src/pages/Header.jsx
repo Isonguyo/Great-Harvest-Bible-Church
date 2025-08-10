@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { HashLink as Link } from "react-router-hash-link";
+import ScrollLink from "./ScrollLink"; // new helper
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
