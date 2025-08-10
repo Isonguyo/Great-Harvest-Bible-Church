@@ -52,11 +52,11 @@ const Header = () => {
       <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
         <Link smooth to="/#home" onClick={closeMenu}>Home</Link>
         <Link smooth to="/about" onClick={closeMenu}>About</Link>
-        <Link smooth to="/#sermons" onClick={closeMenu}>Sermons</Link>
-        <Link smooth to="/#ministries" onClick={closeMenu}>Ministries</Link>
-        <Link smooth to="/#events" onClick={closeMenu}>Events</Link>
-        <Link smooth to="/#contact" onClick={closeMenu}>Contact</Link>
-        <Link className="mobile-give" smooth to="/#give" onClick={closeMenu}>
+        <Link smooth to="#sermons" onClick={closeMenu}>Sermons</Link>
+        <Link smooth to="#ministries" onClick={closeMenu}>Ministries</Link>
+        <Link smooth to="#events" onClick={closeMenu}>Events</Link>
+        <Link smooth to="#contact" onClick={closeMenu}>Contact</Link>
+        <Link className="mobile-give" smooth to="#give" onClick={closeMenu}>
           Give Online
         </Link>
       </div>
