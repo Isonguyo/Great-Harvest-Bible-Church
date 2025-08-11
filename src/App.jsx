@@ -22,10 +22,12 @@ import FullCalendar from "./pages/FullCalendar";
 import GlobalMissionSection from "./pages/mission";
 import CotonouChurchPage from "./pages/CotonouChurchPage";
 import EventDetails from "./pages/EventDetails";
+import  ScrollToHashElement from "./pages/ScrollToHashElement";
 // ✅ Home page component
 const Home = () => {
   return (
     <>
+     <ScrollToHashElement />
       <TopBar />
       <Header />
       <HeroSection />
