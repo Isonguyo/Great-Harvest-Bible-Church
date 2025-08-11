@@ -16,26 +16,32 @@ const EventDetails = () => {
     link.click();
     document.body.removeChild(link);
   };
-const shareVerseImage = async () => {
-  try {
-    const imageUrl = "/images/verseImage.jpg"; // replace with your image path
-    const response = await fetch(imageUrl);
-    const blob = await response.blob();
-    const file = new File([blob], "verse.jpg", { type: blob.type });
 
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      await navigator.share({
-        files: [file],
-        title: "Daily Bible Verse"
-      });
-    } else {
-      alert("Sharing images is not supported on this device/browser.");
+  const shareVerseImage = async () => {
+    try {
+      // Use a fully qualified URL so Android browsers treat it as a secure resource
+      const imageUrl = `${window.location.origin}/images/verseImage.jpg`;
+      const response = await fetch(imageUrl);
+      const blob = await response.blob();
+
+      // Create a proper file with MIME type preserved
+      const file = new File([blob], "verse.jpg", { type: blob.type || "image/jpeg" });
+
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({
+          files: [file],
+          title: "Daily Bible Verse",
+          text: "Here's an inspiring verse for you!"
+        });
+      } else {
+        // Fallback for devices/browsers without file sharing support
+        window.open(`https://wa.me/?text=${encodeURIComponent(imageUrl)}`, "_blank");
+      }
+    } catch (err) {
+      console.error("Error sharing image:", err);
+      alert("Could not share the image.");
     }
-  } catch (err) {
-    console.error("Error sharing image:", err);
-  }
-};
-
+  };
 
   return (
     <>
@@ -51,8 +57,7 @@ const shareVerseImage = async () => {
 
         <div className="event-actions">
           <button onClick={handleDownload}>Download Flier</button>
-         <button onClick={shareVerseImage}>Share</button>
-
+          <button onClick={shareVerseImage}>Share</button>
         </div>
       </div>
       <WhatsAppButton />
