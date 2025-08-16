@@ -49,15 +49,15 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-       <Link smooth to="/#home" onClick={closeMenu}>Home</Link>
-<Link smooth to="/about" onClick={closeMenu}>About</Link>
-<Link smooth to="#sermons" onClick={closeMenu}>Sermons</Link>
-<Link smooth to="#ministries" onClick={closeMenu}>Ministries</Link>
-<Link smooth to="#events" onClick={closeMenu}>Events</Link>
-<Link smooth to="#contact" onClick={closeMenu}>Contact</Link>
-<Link className="mobile-give" smooth to="#give" onClick={closeMenu}>Give Online</Link>
-      </div>
+<div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+  <Link smooth to="/#home" onClick={() => setTimeout(closeMenu, 150)}>Home</Link>
+  <Link smooth to="/about" onClick={() => setTimeout(closeMenu, 150)}>About</Link>
+  <Link smooth to="/#sermons" onClick={() => setTimeout(closeMenu, 150)}>Sermons</Link>
+  <Link smooth to="/#ministries" onClick={() => setTimeout(closeMenu, 150)}>Ministries</Link>
+  <Link smooth to="/#events" onClick={() => setTimeout(closeMenu, 150)}>Events</Link>
+  <Link smooth to="/#contact" onClick={() => setTimeout(closeMenu, 150)}>Contact</Link>
+  <Link className="mobile-give" smooth to="/#give" onClick={() => setTimeout(closeMenu, 150)}>Give Online</Link>
+</div>
     </nav>
   );
 };
