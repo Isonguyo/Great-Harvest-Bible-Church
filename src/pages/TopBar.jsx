@@ -76,14 +76,7 @@ const TopBar = () => {
         <div className="event-button">
           <a href="/event-details" className="btn-view-event">View Event</a>
         </div>
-        <div className="social-links">
-          <a href="https://www.facebook.com/GHBCCalabar" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <button onClick={handleShare} className="btn-share">
-            📤 Share
-          </button>
-        </div>
+       
       </div>
     </div>
   );
