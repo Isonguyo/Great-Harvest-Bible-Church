@@ -71,16 +71,25 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${menuOpen ? "show" : ""}`}> 
-        <Link smooth to="/#home" scroll={scrollToElement} onClick={() => handleNavClick("/#home")}>Home</Link>
-        <Link smooth to="/about" scroll={scrollToElement} onClick={() => handleNavClick("/about")}>About</Link>
-        <Link smooth to="/#sermons" scroll={scrollToElement} onClick={() => handleNavClick("/#sermons")}>Sermons</Link>
-        <Link smooth to="/#ministries" scroll={scrollToElement} onClick={() => handleNavClick("/#ministries")}>Ministries</Link>
-        <Link smooth to="/#events" scroll={scrollToElement} onClick={() => handleNavClick("/#events")}>Events</Link>
-        <Link smooth to="/#contact" scroll={scrollToElement} onClick={() => handleNavClick("/#contact")}>Contact</Link>
-        <Link className="mobile-give" smooth to="/#give" scroll={scrollToElement} onClick={() => handleNavClick("/#give")}>Give Online</Link>
-      </div>
+    {/* Mobile Menu */}
+<div className={`mobile-menu ${menuOpen ? "show" : ""}`}> 
+  {location.pathname === "/" ? (
+    <>
+      <Link smooth to="/#home" scroll={scrollToElement} onClick={() => handleNavClick("/#home")}>Home</Link>
+      <Link smooth to="/about" scroll={scrollToElement} onClick={() => handleNavClick("/about")}>About</Link>
+      <Link smooth to="/#sermons" scroll={scrollToElement} onClick={() => handleNavClick("/#sermons")}>Sermons</Link>
+      <Link smooth to="/#ministries" scroll={scrollToElement} onClick={() => handleNavClick("/#ministries")}>Ministries</Link>
+      <Link smooth to="/#events" scroll={scrollToElement} onClick={() => handleNavClick("/#events")}>Events</Link>
+      <Link smooth to="/#contact" scroll={scrollToElement} onClick={() => handleNavClick("/#contact")}>Contact</Link>
+      <Link className="mobile-give" smooth to="/#give" scroll={scrollToElement} onClick={() => handleNavClick("/#give")}>Give Online</Link>
+    </>
+  ) : (
+    <>
+      <Link smooth to="/#home" scroll={scrollToElement} onClick={() => handleNavClick("/#home")}>Home</Link>
+      <Link smooth to="/about" scroll={scrollToElement} onClick={() => handleNavClick("/about")}>About</Link>
+    </>
+  )}
+</div>
     </nav>
   );
 };
