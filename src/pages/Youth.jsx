@@ -12,7 +12,7 @@ const YouthChurch = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
 
   // Sample images (adjust to your path)
-  const images = Array.from({ length: 30 }, (_, i) => `images/youth${i + 1}.jpg`);
+  const images = Array.from({ length: 32 }, (_, i) => `images/youth${i + 1}.jpg`);
   const visibleImages = showAll ? images : images.slice(0, 6);
 
   const openLightbox = (img) => setLightboxImage(img);
