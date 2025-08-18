@@ -11,7 +11,7 @@ const AdultMinistry = () => {
   const [showAll, setShowAll] = useState(false);
   const [lightboxImage, setLightboxImage] = useState(null);
 
-  const images = Array.from({ length: 63 }, (_, i) => `images/ghbc${i + 1}.jpg`);
+  const images = Array.from({ length: 68 }, (_, i) => `images/ghbc${i + 1}.jpg`);
   const visibleImages = showAll ? images : images.slice(0, 5);
 
   return (
