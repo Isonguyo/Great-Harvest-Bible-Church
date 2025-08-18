@@ -12,7 +12,7 @@ const Worship = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
 
   // Worship images
-  const images = Array.from({ length: 24 }, (_, i) => `images/worship${i + 1}.jpg`);
+  const images = Array.from({ length: 26 }, (_, i) => `images/worship${i + 1}.jpg`);
   const visibleImages = showAll ? images : images.slice(0, 5);
 
   return (
