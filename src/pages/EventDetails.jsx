@@ -57,7 +57,7 @@ const EventDetails = () => {
 
         <div className="event-actions">
           <button onClick={handleDownload}>Download Flier</button>
-          <button onClick={shareVerseImage}>Share</button>
+{/*           <button onClick={shareVerseImage}>Share</button> */}
         </div>
       </div>
       <WhatsAppButton />
