@@ -3,6 +3,16 @@ import { Link } from "react-router-dom";
 import "./LatestSermons.css";
 
 const sermons = [
+     {
+    date: "August 17, 2025",
+    title: "Prepare Ye The Way Of The Lord",
+    text: "Psalms 90:1-12",
+    verse: "Always be prepared.",
+    duration: "10 min",
+    img: "images/ghbc68.jpg",
+    video: "videos/Prepare.mp4",
+    audio: "audios/Prepare.mp3"
+     },
   {
     date: "August 3, 2025",
     title: "Heart Of Wisdom",
@@ -23,16 +33,7 @@ const sermons = [
     video: "videos/Giving-to-the-needy.mp4",
     audio: "audios/Giving-to-the-needy.mp3"
   },
-  {
-    date: "July 13, 2025",
-    title: "How you can manage crisis",
-    text: "John 21:1-14",
-    verse: "In every crisis, trust God’s plan—He turns trials into testimonies",
-    duration: "9 min",
-    img: "images/ghbc25.jpg",
-    video: "videos/Manage-Crisis.mp4",
-    audio: "audios/Manage-Crisis.mp3"
-  },
+
 ];
 
 const LatestSermons = () => {
@@ -155,6 +156,7 @@ const LatestSermons = () => {
                 <span className="text-sm text-yellow-600">{sermon.date}</span>
                 <h3 className="text-xl font-bold mt-2 mb-3">{sermon.title}</h3>
                 <p className="text-gray-600 mb-4">{sermon.verse}</p>
+                 <p className="text-gray-600 mb-4">{sermon.text}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-500">
                     <i className="fas fa-clock mr-1"></i> {sermon.duration}
