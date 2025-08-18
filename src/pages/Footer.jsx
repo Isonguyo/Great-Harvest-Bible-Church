@@ -52,23 +52,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link smooth to="/#sermons" className="hover:text-yellow-300 transition">
+                <Link smooth to="/children-church" className="hover:text-yellow-300 transition">
                  Children
                 </Link>
               </li>
               <li>
-                <Link smooth to="/#events" className="hover:text-yellow-300 transition">
+                <Link smooth to="/Youth" className="hover:text-yellow-300 transition">
                 Youth
                 </Link>
               </li>
               <li>
-                <Link smooth to="/#ministries" className="hover:text-yellow-300 transition">
+                <Link smooth to="/adult" className="hover:text-yellow-300 transition">
                  Adults
-                </Link>
-              </li>
-              <li>
-                <Link smooth to="/#contact" className="hover:text-yellow-300 transition">
-                  Contact
                 </Link>
               </li>
             </ul>
