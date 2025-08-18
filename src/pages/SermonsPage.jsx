@@ -14,8 +14,8 @@ const allSermonsData = [
     verse: "Always be prepared.",
     duration: "10 min",
     img: "images/ghbc68.jpg",
-    video: "videos/Heart-of-wisdom.mp4",
-    audio: "audios/Heart-of-wisdom.mp3"
+    video: "videos/Prepare.mp4",
+    audio: "audios/Prepare.mp3"
      },
     {
     date: "August 3, 2025",
@@ -234,6 +234,7 @@ const AllSermons = () => {
                       {sermon.title}
                     </h3>
                     <p className="text-gray-600 mb-4">{sermon.verse}</p>
+                         <p className="text-gray-600 mb-4">{sermon.text}</p>
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-gray-500">
                         <i className="fas fa-clock mr-1"></i> {sermon.duration}
