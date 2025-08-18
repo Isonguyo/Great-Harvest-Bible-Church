@@ -55,7 +55,7 @@ const Header = () => {
 
         {/* Give Button */}
         <div className="give-btn">
-          <Link smooth to="/#give" scroll={scrollToElement}>Give Online</Link>
+          <Link smooth to="#give" scroll={scrollToElement}>Give Online</Link>
         </div>
 
         {/* Hamburger Icon */}
@@ -78,7 +78,7 @@ const Header = () => {
   <Link smooth to="/Youth" scroll={scrollToElement} onClick={() => handleNavClick("/Youth")}>Youth</Link>
   <Link smooth to="/adult" scroll={scrollToElement} onClick={() => handleNavClick("/adult")}>Adult</Link>
   <Link smooth to="/worship" scroll={scrollToElement} onClick={() => handleNavClick("/worship")}>Worship</Link>
-  <Link className="mobile-give" smooth to="/#give" scroll={scrollToElement} onClick={() => handleNavClick("/#give")}>Give Online</Link>
+  <Link className="mobile-give" smooth to="/#give" scroll={scrollToElement} onClick={() => handleNavClick("#give")}>Give Online</Link>
 </div>
     </nav>
   );
