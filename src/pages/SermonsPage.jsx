@@ -7,6 +7,16 @@ import BackToTop from "./BackToTop";
 import WhatsAppButton from "./WhatsappButton";
 
 const allSermonsData = [
+     {
+    date: "August 17, 2025",
+    title: "Prepare Ye The Way Of The Lord",
+    text: "Psalms 90:1-12",
+    verse: "Always be prepared.",
+    duration: "10 min",
+    img: "images/ghbc68.jpg",
+    video: "videos/Heart-of-wisdom.mp4",
+    audio: "audios/Heart-of-wisdom.mp3"
+     },
     {
     date: "August 3, 2025",
     title: "Heart Of Wisdom",
