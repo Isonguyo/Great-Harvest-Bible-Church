@@ -27,7 +27,7 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          setCopyMessage("❌ Failed to send message. Please try again.");
+          setCopyMessage("❌ Failed to send message. Please check your network connection and try again.");
           console.error(error.text);
           setTimeout(() => setCopyMessage(""), 3000);
         }
