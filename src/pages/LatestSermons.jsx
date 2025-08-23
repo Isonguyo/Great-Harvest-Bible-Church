@@ -6,7 +6,7 @@ const sermons = [
      {
     date: "August 17, 2025",
     title: "Prepare Ye The Way Of The Lord",
-    text: "Psalms 90:1-12",
+    text: "Isiah 40:1-5",
     verse: "Always be prepared.",
     duration: "10 min",
     img: "images/ghbc68.jpg",
