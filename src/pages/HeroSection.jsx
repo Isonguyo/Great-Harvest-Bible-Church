@@ -61,7 +61,7 @@ const HeroSection = () => {
       text: "The harvest is great...",
       buttons: [
         { text: "Get Directions", link: "https://maps.app.goo.gl/fDJcLNDXz8Cxb88J6", primary: true },
-        { text: "Watch Live", link: "#sermons", primary: false },
+        { text: "Watch Live", link: "https://www.facebook.com/GHBCCalabar/live", primary: false },
       ],
     },
     {
