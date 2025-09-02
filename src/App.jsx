@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import TopBar from './pages/TopBar';
+// import TopBar from './pages/TopBar';
 import Header from './pages/Header';
 import HeroSection from './pages/HeroSection';
 import WelcomeSection from './pages/Welcome';
@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <>
      <ScrollToHashElement />
-      <TopBar />
+{/*       <TopBar /> */}
       <Header />
       <HeroSection />
       <WelcomeSection />
