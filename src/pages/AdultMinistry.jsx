@@ -154,5 +154,5 @@ const AdultMinistry = () => {
   );
 };
 
-export default AdultMinistry;          <p>
+export default AdultMinistry;         
             
