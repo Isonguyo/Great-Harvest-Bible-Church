@@ -11,9 +11,14 @@ const YouthChurch = () => {
   const [showAll, setShowAll] = useState(false);
   const [lightboxImage, setLightboxImage] = useState(null);
 
-  // Sample images (adjust to your path)
+  // Youth images (ascending order)
   const images = Array.from({ length: 34 }, (_, i) => `images/youth${i + 1}.jpg`);
-  const visibleImages = showAll ? images : images.slice(0, 6);
+
+  // 🔄 Reverse globally so newest appears first
+  const reversedImages = [...images].reverse();
+
+  // Slice after reversing
+  const visibleImages = showAll ? reversedImages : reversedImages.slice(0, 6);
 
   const openLightbox = (img) => setLightboxImage(img);
   const closeLightbox = () => setLightboxImage(null);
@@ -50,7 +55,7 @@ const YouthChurch = () => {
         <div className="programs-section fade-in">
           <h2 className="section-title">Programs & Activities</h2>
           <ul>
-            <li><strong>Youth  Prayer:</strong> Every Sunday at 7 AM...before main service</li>
+            <li><strong>Youth Prayer:</strong> Every Sunday at 7 AM...before main service</li>
             <li><strong>Youth Choir:</strong> Every Friday at 4 PM</li>
             {/* <li><strong>Music & Creative Arts:</strong> Every Saturday</li>
             <li><strong>Community Outreach:</strong> Quarterly missions</li> */}
@@ -69,7 +74,12 @@ const YouthChurch = () => {
           <div className="gallery-grid">
             {visibleImages.map((src, i) => (
               <div key={i} className="gallery-item" style={{ animationDelay: `${i * 0.05}s` }}>
-                <img src={src} alt={`Youth activity ${i + 1}`} loading="lazy" onClick={() => openLightbox(src)} />
+                <img 
+                  src={src} 
+                  alt={`Youth activity ${i + 1}`} 
+                  loading="lazy" 
+                  onClick={() => openLightbox(src)} 
+                />
               </div>
             ))}
           </div>
@@ -113,8 +123,8 @@ const YouthChurch = () => {
         {/* Call to Action */}
         <div className="cta-buttons fade-in">
           <div className="give-btn">
-                    <Link smooth to="/#give">Give Online</Link>
-                  </div>
+            <Link smooth to="/#give">Give Online</Link>
+          </div>
         </div>
       </div>
 
