@@ -11,9 +11,14 @@ const Worship = () => {
   const [showAll, setShowAll] = useState(false);
   const [lightboxImage, setLightboxImage] = useState(null);
 
-  // Worship images
+  // Worship images (ascending)
   const images = Array.from({ length: 40 }, (_, i) => `images/worship${i + 1}.jpg`);
-  const visibleImages = showAll ? images : images.slice(0, 5);
+
+  // 🔄 Reverse globally so newest appears first
+  const reversedImages = [...images].reverse();
+
+  // Slice after reversing
+  const visibleImages = showAll ? reversedImages : reversedImages.slice(0, 5);
 
   return (
     <section className="worship-page">
@@ -36,9 +41,10 @@ const Worship = () => {
         <div className="section worship-about">
           <h2 className="section-title">About Worship Ministry</h2>
           <p>
-            The Worship Ministry is dedicated to creating an atmosphere where people can encounter
-            God through heartfelt worship. Our team is passionate about leading the congregation
-            into the presence of God with excellence, humility, and a spirit of service.
+            The Worship Ministry is dedicated to creating an atmosphere where
+            people can encounter God through heartfelt worship. Our team is
+            passionate about leading the congregation into the presence of God
+            with excellence, humility, and a spirit of service.
           </p>
         </div>
 
@@ -57,8 +63,9 @@ const Worship = () => {
         <div className="section">
           <h2 className="section-title">Service Schedule</h2>
           <p>
-            Worship sessions take place during every Sunday Service at <strong>9:00 AM</strong>, and
-            at all special events and programs throughout the year.
+            Worship sessions take place during every Sunday Service at{" "}
+            <strong>9:00 AM</strong>, and at all special events and programs
+            throughout the year.
           </p>
         </div>
 
@@ -84,7 +91,10 @@ const Worship = () => {
 
           {images.length > 5 && (
             <div className="view-all-container">
-              <button className="btn-secondary" onClick={() => setShowAll((prev) => !prev)}>
+              <button
+                className="btn-secondary"
+                onClick={() => setShowAll((prev) => !prev)}
+              >
                 {showAll ? "Show Less" : "View All"}
               </button>
             </div>
@@ -94,12 +104,20 @@ const Worship = () => {
         {/* Lightbox */}
         {lightboxImage && (
           <div className="lightbox" onClick={() => setLightboxImage(null)}>
-            <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <div
+              className="lightbox-content"
+              onClick={(e) => e.stopPropagation()}
+            >
               <img src={lightboxImage} alt="Preview" className="lightbox-img" />
               <a href={lightboxImage} download className="download-btn">
                 Download Image
               </a>
-              <button className="close-btn" onClick={() => setLightboxImage(null)}>✕</button>
+              <button
+                className="close-btn"
+                onClick={() => setLightboxImage(null)}
+              >
+                ✕
+              </button>
             </div>
           </div>
         )}
@@ -113,9 +131,9 @@ const Worship = () => {
         </div>
 
         {/* Call to Action */}
-           <div className="give-btn">
-                  <Link smooth to="/#give">Give Online</Link>
-                </div>
+        <div className="give-btn">
+          <Link smooth to="/#give">Give Online</Link>
+        </div>
       </div>
 
       <Footer />
@@ -126,4 +144,3 @@ const Worship = () => {
 };
 
 export default Worship;
-
