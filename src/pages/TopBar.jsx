@@ -3,7 +3,7 @@ import "./TopBar.css";
 
 const fullCalendar = [
   { month: "September", week: 28, title: "Healing Convention & Mission Confrence", date: "25th–31st", time: "Morning & Evening" },
-  { month: "September", week: 30, title: "HATEM Prophetic School of Ministry", date: "", time: "" },
+  { month: "September", week: 30, title: "Youth week/Talent hunt", date: "25th-28th", time: "all day" },
   { month: "October", week: 34, title: "Pastor’s Shower", date: "12th", time: "" },
   { month: "October", week: 35, title: "Women’s Week", date: "20th–25th", time: "" },
   { month: "November", week: 37, title: "Men’s Week", date: "3rd–9th", time: "" },
