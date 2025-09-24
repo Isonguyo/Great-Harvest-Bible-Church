@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import WhatsAppButton from "./WhatsappButton";
 
 const EventDetails = () => {
-  const flierURL = "/images/flierImage.jpg"; // public folder
+  const flierURL = "/images/youth-flier.jpg"; // public folder
   const eventURL = "https://yourdomain.com/event-details";
 
   const handleDownload = () => {
@@ -47,9 +47,9 @@ const EventDetails = () => {
     <>
       <Header />
       <div className="event-details">
-        <h2>Healing Convention</h2>
-        <p><strong>Date:</strong> 25th–31st September</p>
-        <p><strong>Time:</strong> Morning & Evening</p>
+        <h2>Youth Week</h2>
+        <p><strong>Date:</strong> 25th–28th September</p>
+        <p><strong>Time:</strong> Morning & Evening(as instructed)</p>
 
         <div className="flier-container">
           <img src={flierURL} alt="Event Flier" className="event-flier" />
