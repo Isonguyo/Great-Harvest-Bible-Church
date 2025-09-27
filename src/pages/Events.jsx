@@ -3,46 +3,42 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const events = [
   {
-    date: "25th - 26th",
-    month: "July",
-    time: "5:00 PM",
-    title: "Sunday School Week",
-    description: "A week of engaging lessons and activities for all ages.",
-    location: "Main Auditorium",
-    // linkText: "Join Us",
-    color: "bg-green-800",
-  },
-  {
-    date: "25th - 31st",
-    month: "August",
-    time: "All Day",
-    title: "Healing Convention",
-    description:
-      "A week of divine healing services and prayer sessions.",
-    location: "Starting at Church Premises",
-    // linkText: "Volunteer",
-    color: "bg-yellow-600",
-  },
-  {
-    date: "15th - 21st",
-    month: "September",
-    time: "Varies",
-    title: "Youth Week",
-    description:
-      "A special week dedicated to teaching and celebrating our youth and young adults.",
-    location: "Varies",
-    // linkText: "Learn More",
-    color: "bg-green-800",
-  },
-  {
     date: "12th",
     month: "October",
     time: "09:00 AM",
-    title: "Pastors' Shower",
-    description:
-      "A special service to honor and appreciate our pastors.",
+    title: "Pastor’s Shower",
+    description: "A special service to honor and appreciate our pastors.",
     location: "Main Auditorium",
-    // linkText: "Be Healed",
+    color: "bg-green-800",
+  },
+  {
+    date: "20th - 25th",
+    month: "October",
+    time: "Varies",
+    title: "Women’s Week",
+    description:
+      "A week dedicated to empowering, teaching, and celebrating our women in the church.",
+    location: "Main Auditorium",
+    color: "bg-yellow-600",
+  },
+  {
+    date: "3rd - 9th",
+    month: "November",
+    time: "Varies",
+    title: "Men’s Week",
+    description:
+      "A powerful week of programs, teachings, and activities for the men of the church.",
+    location: "Main Auditorium",
+    color: "bg-green-800",
+  },
+  {
+    date: "14th",
+    month: "December",
+    time: "5:00 PM",
+    title: "Carol Service",
+    description:
+      "A joyful evening of worship, songs, and celebration of the birth of Christ.",
+    location: "Main Auditorium",
     color: "bg-yellow-600",
   },
 ];
@@ -86,9 +82,6 @@ const UpcomingEvents = () => {
                   <span className="text-sm text-gray-500">
                     <i className="fas fa-map-marker-alt mr-1"></i> {event.location}
                   </span>
-                  <a href="#" className="text-green-700 hover:underline">
-                    {event.linkText}
-                  </a>
                 </div>
               </div>
             </div>
