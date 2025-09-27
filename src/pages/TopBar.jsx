@@ -73,9 +73,9 @@ const TopBar = () => {
         <div className="announcement">
           <span>{announcement || "Stay tuned for upcoming events!"}</span>
         </div>
-        <div className="event-button">
+        {/* <div className="event-button">
           <a href="/event-details" className="btn-view-event">View Event</a>
-        </div>
+        </div> */}
        
       </div>
     </div>
