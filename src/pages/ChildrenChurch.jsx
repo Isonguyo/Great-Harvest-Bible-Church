@@ -33,7 +33,7 @@ return (
 <Header />
 
 {/* Hero Section */}  
-  <div className="children-hero-section">  
+  <div id="child" className="children-hero-section">  
     <div className="children-overlay">  
       <h1 className="children-title">Children's Church</h1>  
       <p className="children-subtitle">  
