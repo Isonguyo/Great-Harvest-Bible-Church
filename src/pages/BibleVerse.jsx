@@ -1,32 +1,27 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./BibleVerse.css";
 
-const verses = [
-  { text: "“And he said, I will make all my goodness pass before thee...”", reference: "Exodus 33:19" },
-  { text: "“For God so loved the world that he gave his only Son...”", reference: "John 3:16" },
-  { text: "“I can do all things through Christ who strengthens me.”", reference: "Philippians 4:13" },
-  { text: "“The Lord is my shepherd; I shall not want.”", reference: "Psalm 23:1" },
-  { text: "“Trust in the Lord with all your heart and lean not on your own understanding.”", reference: "Proverbs 3:5" },
-  { text: "“Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.”", reference: "Joshua 1:9" },
-  { text: "“Come to me, all you who are weary and burdened, and I will give you rest.”", reference: "Matthew 11:28" },
-  { text: "“Cast all your anxiety on him because he cares for you.”", reference: "1 Peter 5:7" },
-  { text: "“But those who hope in the Lord will renew their strength.”", reference: "Isaiah 40:31" },
-  { text: "“The Lord is my light and my salvation—whom shall I fear?”", reference: "Psalm 27:1" },
-  { text: "“We love because He first loved us.”", reference: "1 John 4:19" },
-  { text: "“Be still, and know that I am God.”", reference: "Psalm 46:10" },
-  { text: "“Do to others as you would have them do to you.”", reference: "Luke 6:31" },
-  { text: "“Your word is a lamp to my feet and a light to my path.”", reference: "Psalm 119:105" },
-  { text: "“Delight yourself in the Lord, and he will give you the desires of your heart.”", reference: "Psalm 37:4" },
-  { text: "“Blessed are the peacemakers, for they will be called children of God.”", reference: "Matthew 5:9" },
-  { text: "“Do not let your hearts be troubled. You believe in God; believe also in me.”", reference: "John 14:1" },
-  { text: "“With God all things are possible.”", reference: "Matthew 19:26" },
-  { text: "“Rejoice always, pray continually, give thanks in all circumstances.”", reference: "1 Thessalonians 5:16-18" },
-  { text: "“He gives strength to the weary and increases the power of the weak.”", reference: "Isaiah 40:29" },
-  { text: "“The name of the Lord is a strong tower; the righteous run to it and are safe.”", reference: "Proverbs 18:10" },
-  { text: "“For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.”", reference: "Jeremiah 29:11" },
-  { text: "“The Lord is good, a refuge in times of trouble. He cares for those who trust in him.”", reference: "Nahum 1:7" },
-  { text: "“Do not be overcome by evil, but overcome evil with good.”", reference: "Romans 12:21" },
-  { text: "“Let all that you do be done in love.”", reference: "1 Corinthians 16:14" }
+const verseReferences = [
+  "John 3:16",
+  "Philippians 4:13",
+  "Psalm 23:1",
+  "Proverbs 3:5",
+  "Joshua 1:9",
+  "Matthew 11:28",
+  "Isaiah 40:31",
+  "Psalm 27:1",
+  "1 John 4:19",
+  "Psalm 46:10",
+  "Luke 6:31",
+  "Psalm 119:105",
+  "Psalm 37:4",
+  "Matthew 5:9",
+  "John 14:1",
+  "Matthew 19:26",
+  "1 Thessalonians 5:16-18",
+  "Jeremiah 29:11",
+  "Romans 12:21",
+  "1 Corinthians 16:14"
 ];
 
 const BibleVerse = () => {
@@ -38,15 +33,23 @@ const BibleVerse = () => {
   const [copyMessage, setCopyMessage] = useState("");
   const verseRef = useRef(null);
 
-  // Pick a verse based on the day of the year
+  // Pick a random verse (same one for each day)
   useEffect(() => {
     const today = new Date();
     const dayOfYear = Math.floor(
       (today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
     );
-    const verseOfTheDay = verses[dayOfYear % verses.length];
-    setVerseText(verseOfTheDay.text);
-    setReference(verseOfTheDay.reference);
+
+    // Always pick the same verse for today (so it's "daily", not totally random on refresh)
+    const randomRef = verseReferences[dayOfYear % verseReferences.length];
+
+    fetch(`https://bible-api.com/${encodeURIComponent(randomRef)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setVerseText(data.text.trim());
+        setReference(data.reference);
+      })
+      .catch((err) => console.error("Error fetching verse:", err));
   }, []);
 
   // Intersection Observer to trigger animation on scroll
@@ -83,24 +86,22 @@ const BibleVerse = () => {
     setTimeout(() => setCopyMessage(""), 2000);
   };
 
-// Share API
-const shareVerse = async () => {
-  const fullText = `${verseText} — ${reference}`;
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: "Daily Bible Verse",
-        text: fullText
-        // Removed: url: window.location.href
-      });
-    } catch (err) {
-      console.error("Error sharing:", err);
+  // Share API
+  const shareVerse = async () => {
+    const fullText = `${verseText} — ${reference}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: "Daily Bible Verse",
+          text: fullText,
+        });
+      } catch (err) {
+        console.error("Error sharing:", err);
+      }
+    } else {
+      alert("Sharing not supported on this browser. Please copy instead.");
     }
-  } else {
-    alert("Sharing not supported on this browser. Please copy instead.");
-  }
-};
-
+  };
 
   return (
     <section ref={verseRef} className="py-16 bg-green-800 text-white">
