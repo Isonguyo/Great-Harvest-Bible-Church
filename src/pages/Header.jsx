@@ -46,7 +46,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <ul className="nav-links">
           <li><Link smooth to="/#home" scroll={scrollToElement}>Home</Link></li>
-          <li><Link smooth to="/#about" scroll={scrollToElement}>About</Link></li>
+          <li><Link smooth to="/about" scroll={scrollToElement}>About</Link></li>
           <li><Link smooth to="/children-church" scroll={scrollToElement}>Children</Link></li>
           <li><Link smooth to="/Youth" scroll={scrollToElement}>Youth</Link></li>
           <li><Link smooth to="/adult" scroll={scrollToElement}>Adult</Link></li>
