@@ -24,7 +24,7 @@ const AboutUs = () => {
       <Header />
       <section className="about-section">
         {/* ✅ Hero Section */}
-        <div id="about"  className="about-hero">
+        <div id="about-hero"  className="about-hero">
           <div className="overlay">
             <h1>About Us</h1>
             <p>Discover who we are, what we believe, and why we serve.</p>
