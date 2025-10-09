@@ -22,9 +22,9 @@ const AboutUs = () => {
     <>
       <TopBar />
       <Header />
-      <section id="about" className="about-section">
+      <section className="about-section">
         {/* ✅ Hero Section */}
-        <div className="about-hero">
+        <div id="about"  className="about-hero">
           <div className="overlay">
             <h1>About Us</h1>
             <p>Discover who we are, what we believe, and why we serve.</p>
