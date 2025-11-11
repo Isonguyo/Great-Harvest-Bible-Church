@@ -14,7 +14,7 @@ const [lightboxImage, setLightboxImage] = useState(null);
 const images = Array.from({ length: 140 }, (_, i) => `images/ghbc${140 - i}.jpg`);const visibleImages = showAll ? images : images.slice(0, 5);
 
 return (
-<section className="adults-page">
+<section id="adult" className="adults-page">
 <TopBar />
 <Header />
 
