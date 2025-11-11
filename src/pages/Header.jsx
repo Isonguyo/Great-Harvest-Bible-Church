@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -45,12 +46,12 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <ul className="nav-links">
-          <li><Link smooth to="/#home" scroll={scrollToElement}>Home</Link></li>
-          <li><Link smooth to="/#about-hero" scroll={scrollToElement}>About</Link></li>
-          <li><Link smooth to="/children-church" scroll={scrollToElement}>Children</Link></li>
-          <li><Link smooth to="/Youth" scroll={scrollToElement}>Youth</Link></li>
-          <li><Link smooth to="/adult" scroll={scrollToElement}>Adult</Link></li>
-          <li><Link smooth to="/worship" scroll={scrollToElement}>Worship</Link></li>
+          <li><HashLink smooth to="/#home" scroll={scrollToElement}>Home</HashLink></li>
+          <li><HashLink smooth to="/about#about" scroll={scrollToElement}>About</HashLink></li>
+          <li><HashLink smooth to="/children-church#children" scroll={scrollToElement}>Children</HashLink></li>
+          <li><HashLink smooth to="/Youth#youth" scroll={scrollToElement}>Youth</HashLink></li>
+          <li><HashLink smooth to="/adult#adult" scroll={scrollToElement}>Adult</HashLink></li>
+          <li><HashLink smooth to="/worship#worship" scroll={scrollToElement}>Worship</HashLink></li>
         </ul>
 
         {/* Give Button */}
@@ -72,13 +73,13 @@ const Header = () => {
 
 {/* Mobile Menu */}
 <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-  <Link smooth to="/#home" scroll={scrollToElement} onClick={() => handleNavClick("/#home")}>Home</Link>
-  <Link smooth to="/about" scroll={scrollToElement} onClick={() => handleNavClick("/about")}>About</Link>
-  <Link smooth to="/children-church" scroll={scrollToElement} onClick={() => handleNavClick("/children-church")}>Children</Link>
-  <Link smooth to="/Youth" scroll={scrollToElement} onClick={() => handleNavClick("/Youth")}>Youth</Link>
-  <Link smooth to="/adult" scroll={scrollToElement} onClick={() => handleNavClick("/adult")}>Adult</Link>
-  <Link smooth to="/worship" scroll={scrollToElement} onClick={() => handleNavClick("/worship")}>Worship</Link>
-  <Link className="mobile-give" smooth to="/mission" scroll={scrollToElement} onClick={() => handleNavClick("#give")}>Global Missions</Link>
+  <HashLink smooth to="/#home" scroll={scrollToElement} onClick={() => handleNavClick("/#home")}>Home</HashLink>
+  <HashLink smooth to="/about#about" scroll={scrollToElement} onClick={() => handleNavClick("/about")}>About</HashLink>
+  <HashLink smooth to="/children-church#children" scroll={scrollToElement} onClick={() => handleNavClick("/children-church")}>Children</HashLink>
+  <HashLink smooth to="/Youth#youth" scroll={scrollToElement} onClick={() => handleNavClick("/Youth")}>Youth</HashLink>
+  <HashLink smooth to="/adult#adult" scroll={scrollToElement} onClick={() => handleNavClick("/adult")}>Adult</HashLink>
+  <HashLink smooth to="/worship#worship" scroll={scrollToElement} onClick={() => handleNavClick("/worship")}>Worship</HashLink>
+  <HashLink className="mobile-give" smooth to="/mission#mission" scroll={scrollToElement} onClick={() => handleNavClick("#give")}>Global Missions</HashLink>
 </div>
     </nav>
   );
