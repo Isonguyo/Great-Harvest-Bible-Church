@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
@@ -42,29 +43,29 @@ const Footer = () => {
             <h3 className="title-font text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link smooth to="/#home" className="hover:text-yellow-300 transition">
+                <HashLink smooth to="/#home" className="hover:text-yellow-300 transition">
                   Home
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <Link smooth to="/about" className="hover:text-yellow-300 transition">
+                <HashLink smooth to="/about#about" className="hover:text-yellow-300 transition">
                   About Us
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <Link smooth to="/children-church" className="hover:text-yellow-300 transition">
+                <HashLink smooth to="/children-church#children" className="hover:text-yellow-300 transition">
                  Children
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <Link smooth to="/Youth" className="hover:text-yellow-300 transition">
+                <HashLink smooth to="/Youth#youth" className="hover:text-yellow-300 transition">
                 Youth
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <Link smooth to="/adult" className="hover:text-yellow-300 transition">
+                <HashLink smooth to="/adult#adult" className="hover:text-yellow-300 transition">
                  Adults
-                </Link>
+                </HashLink>
               </li>
             </ul>
           </div>
