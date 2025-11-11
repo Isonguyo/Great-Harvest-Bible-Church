@@ -22,7 +22,7 @@ const AboutUs = () => {
     <>
       <TopBar />
       <Header />
-      <section className="about-section">
+      <section id="about" className="about-section">
         {/* ✅ Hero Section */}
         <div id="about-hero"  className="about-hero">
           <div className="overlay">
