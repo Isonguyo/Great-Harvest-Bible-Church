@@ -19,7 +19,7 @@ const openLightbox = (img) => setLightboxImage(img);
 const closeLightbox = () => setLightboxImage(null);
 
 return (
-<section className="youth-church">
+<section id="youth" className="youth-church">
 <TopBar />
 <Header />
 
