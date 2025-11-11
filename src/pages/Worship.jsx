@@ -16,7 +16,7 @@ const images = Array.from({ length: 56 }, (_, i) => `images/worship${56 - i}.jpg
 const visibleImages = showAll ? images : images.slice(0, 5);
 
 return (
-<section className="worship-page">
+<section id=worship className="worship-page">
 <TopBar />
 <Header />
 
