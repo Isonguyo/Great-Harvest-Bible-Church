@@ -28,7 +28,7 @@ setLightboxImage(null);
 };
 
 return (
-<section className="children-church">
+<section id="children" className="children-church">
 <TopBar />
 <Header />
 
