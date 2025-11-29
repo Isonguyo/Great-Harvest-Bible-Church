@@ -173,7 +173,7 @@ const AllSermons = () => {
     <>
       <TopBar />
       <Header />
-      <section className="py-16 bg-gray-100">
+      <section id="sermons" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           {/* Page Title */}
           <div className="text-center mb-12">
