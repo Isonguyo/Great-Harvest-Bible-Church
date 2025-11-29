@@ -53,7 +53,7 @@ function App() {
         <Route path="/sermons" element={<AllSermons />} />
         <Route path="/children-church" element={<ChildrenChurch />} />
         <Route path="/youth" element={<YouthChurch />} />
-        <Route path="/#adult-hero" element={<AdultsMinistry />} />
+        <Route path="/adult" element={<AdultsMinistry />} />
         <Route path="/worship" element={<Worship />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/calendar" element={<FullCalendar />} />
