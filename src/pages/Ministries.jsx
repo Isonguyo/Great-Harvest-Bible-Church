@@ -8,28 +8,28 @@ const ministries = [
     image: "images/ghbc46.jpg",
     description:
       "Ages 0-15. A fun, safe place where kids learn about Jesus through stories, songs, and activities. Growing in faith while having fun—every Sunday!",
-    link: "/children-church",
+    link: "/children-church#children",
   },
   {
     name: "Youth",
     image: "images/ghbc13.jpg",
     description:
       "Empowering the next generation to live for Christ. Join us for fun, faith-filled gatherings, and real-life conversations.",
-    link: "/Youth",
+    link: "/Youth#youth",
   },
   {
     name: "Adults",
     image: "images/ghbc1.jpg",
     description:
       "Growing in faith, walking in purpose. Connect with others through worship, the Word, and meaningful fellowship.",
-    link: "/adult",
+    link: "/adult#adult",
   },
   {
     name: "Worship",
     image: "images/ghbc30.jpg",
     description:
       "Lifting hearts through spirit-filled worship. Join the voices leading praise with passion and purpose.",
-    link: "/worship",
+    link: "/worship#worship",
   },
 ];
 
