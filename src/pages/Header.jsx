@@ -56,7 +56,7 @@ const Header = () => {
 
         {/* Give Button */}
         <div className="give-btn">
-          <Link smooth to="/mission" scroll={scrollToElement}>Global Missions</Link>
+          <Link smooth to="/mission#mission" scroll={scrollToElement}>Global Missions</Link>
         </div>
 
         {/* Hamburger Icon */}
