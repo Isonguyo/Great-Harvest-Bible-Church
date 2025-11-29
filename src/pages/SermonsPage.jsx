@@ -7,6 +7,7 @@ import BackToTop from "./BackToTop";
 import WhatsAppButton from "./WhatsappButton";
 
 const allSermonsData = [
+
      {
     date: "August 17, 2025",
     title: "Prepare Ye The Way Of The Lord",
