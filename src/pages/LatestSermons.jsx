@@ -111,7 +111,7 @@ const LatestSermons = () => {
   };
 
   return (
-    <section id="sermons" className="py-16 bg-gray-100">
+    <section  className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -189,7 +189,7 @@ const LatestSermons = () => {
         {/* View All Button */}
         <div className="text-center mt-12">
           <Link
-            to="/sermons"
+            to="/sermons#sermons"
             className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-md font-medium transition"
           >
             View All Sermons
