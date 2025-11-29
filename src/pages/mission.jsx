@@ -47,9 +47,9 @@ const GlobalMissionSection = () => {
   return (
     <>
       <Header />
-      <section id="mission" className="py-16 px-4 bg-white text-gray-800">
+      <section className="py-16 px-4 bg-white text-gray-800">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-green-700">Our Global Mission</h2>
+          <h2 id="mission" className="text-4xl font-bold mb-4 text-green-700">Our Global Mission</h2>
           <p className="text-lg mb-10">
             Through God’s grace, we have expanded beyond borders to reach lives across the world.
             Our international branches continue to share the gospel and transform lives in diverse nations.
