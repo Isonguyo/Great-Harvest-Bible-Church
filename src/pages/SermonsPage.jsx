@@ -173,11 +173,11 @@ const AllSermons = () => {
     <>
       <TopBar />
       <Header />
-      <section id="sermons" className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           {/* Page Title */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-green-800 mb-4">
+            <h2 id="sermons" className="text-4xl font-bold text-green-800 mb-4">
               All Sermons
             </h2>
             <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
