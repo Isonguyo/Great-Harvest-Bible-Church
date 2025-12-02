@@ -8,6 +8,16 @@ import WhatsAppButton from "./WhatsappButton";
 
 const allSermonsData = [
 
+       {
+    date: "August 17, 2025",
+    title: "Three (3) Areas of separation",
+    text: "Genesis 2:1-3,Galatians 3:13-14,Joshua 24:2; Hebrews 11:9-10",
+    verse: "Be separate from amongst them.",
+    duration: "10 min",
+    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764706444/GO_yvftwe.jpg",
+    video: "videos/Prepare.mp4",
+    audio: "audios/Prepare.mp3"
+     },
      {
     date: "August 17, 2025",
     title: "Prepare Ye The Way Of The Lord",
