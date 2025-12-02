@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./LatestSermons.css";
 
 const sermons = [
@@ -188,12 +189,12 @@ const LatestSermons = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Link
+          <HashLink
             to="/sermons#sermons"
             className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-md font-medium transition"
           >
             View All Sermons
-          </Link>
+          </HashLink>
         </div>
       </div>
 
