@@ -8,15 +8,25 @@ import WhatsAppButton from "./WhatsappButton";
 
 const allSermonsData = [
 
+         {
+    date: "October 24, 2025",
+    title: "Angels Of Destiny",
+    text: "Genesis 32:22-28",
+    verse: "Always be prepared.",
+    duration: "10 min",
+    img: "images/ghbc68.jpg",
+    video: "videos/Prepare.mp4",
+    audio: "audios/Prepare.mp3"
+     },
        {
-    date: "August 17, 2025",
+    date: "October 12, 2025",
     title: "Three (3) Areas of separation",
     text: "Genesis 2:1-3,Galatians 3:13-14,Joshua 24:2; Hebrews 11:9-10",
     verse: "Be separate from amongst them.",
     duration: "10 min",
     img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764706444/GO_yvftwe.jpg",
-    video: "videos/Prepare.mp4",
-    audio: "audios/Prepare.mp3"
+    video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764712332/FDownloader.Net_AQPRnA_WP1ZePXFFt-VEhmkB0J0MK6lTta264l9WPm_Av0beIXq8VMOYBDEtNVsJ4Wj3jIoh7zpHQo4qYk-Ki9No0n5v777HW7iislflq9C8lg_720p__HD_btutuh.mp4",
+    audio: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764713153/109b-8a23-41f0-8c3c-b277d21e0e27_b8ay9x.mp3"
      },
      {
     date: "August 17, 2025",
