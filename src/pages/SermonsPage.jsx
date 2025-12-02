@@ -14,9 +14,9 @@ const allSermonsData = [
     text: "Genesis 32:22-28",
     verse: "Always be prepared.",
     duration: "10 min",
-    img: "images/ghbc68.jpg",
-    video: "videos/Prepare.mp4",
-    audio: "audios/Prepare.mp3"
+    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764716265/Go1_nsdujn.jpg",
+    video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764714525/FDownloader.Net_AQNHBv6kyp8YS_0iRnwHuJjBCCVpZ5YD5j0BJ9arYwoGVLLzI7KCnqAJ9iR2hm06Clss-tvX1Gtpb96K7mopH1K-h3K2PDaOFFlLCghAafgatg_720p__HD_lhe6zq.mp4",
+    audio: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764716017/tinywow_FDownloader.Net_AQNHBv6kyp8YS_0iRnwHuJjBCCVpZ5YD5j0BJ9arYwoGVLLzI7KCnqAJ9iR2hm06Clss-tvX1Gtpb96K7mopH1K-h3K2PDaOFFlL_86406731_npztky.mp3"
      },
        {
     date: "October 12, 2025",
