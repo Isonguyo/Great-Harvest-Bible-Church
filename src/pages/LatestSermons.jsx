@@ -4,37 +4,36 @@ import { HashLink } from "react-router-hash-link";
 import "./LatestSermons.css";
 
 const sermons = [
-     {
-    date: "August 17, 2025",
-    title: "Prepare Ye The Way Of The Lord",
-    text: "Isiah 40:1-5",
-    verse: "Always be prepared.",
+              {
+    date: "November 2, 2025",
+    title: "How To Live Supernaturally ",
+    text: "John 14:17-18;23-24",
+    verse: "Be washe in the blood",
     duration: "10 min",
-    img: "images/ghbc68.jpg",
-    video: "videos/Prepare.mp4",
-    audio: "audios/Prepare.mp3"
+    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764791015/GO2_btb2sb.jpg",
+    video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764790730/FDownloader.Net_AQOfcSrLAMHO3-euKssEXGORl6NAYwp2WjaKGMZuuAhdZjVHRj6sjDzgnoP-5xOxmeemSWl_3JY6Us8yTMtHLKerkT8Gj9Kd6hON3tF_8v9vYA_720p__HD_wdqpd7.mp4",
+    audio: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764790899/3613-b278-43ed-8bb4-6f10f637d08c_xpo3kc.mp3"
      },
-  {
-    date: "August 3, 2025",
-    title: "Heart Of Wisdom",
-    text: "Psalms 90:1-12",
-    verse: "Be Wise as Serpents but harmless as Doves.",
-    duration: "9 min",
-    img: "images/ghbc64.jpg",
-    video: "videos/Heart-of-wisdom.mp4",
-    audio: "audios/Heart-of-wisdom.mp3"
-  },
-  {
-    date: "July 20, 2025",
-    title: "Giving to the needy",
-    text: "Dueteronomy 15:11",
-    verse: "When you give to the poor, you lend to the Lord, and He will repay you.",
-    duration: "9 min",
-    img: "images/ghbc23.jpg",
-    video: "videos/Giving-to-the-needy.mp4",
-    audio: "audios/Giving-to-the-needy.mp3"
-  },
-
+         {
+    date: "October 24, 2025",
+    title: "Angels Of Destiny",
+    text: "Genesis 32:22-28",
+    verse: "There's an angel for every situation.",
+    duration: "10 min",
+    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764716265/Go1_nsdujn.jpg",
+    video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764714525/FDownloader.Net_AQNHBv6kyp8YS_0iRnwHuJjBCCVpZ5YD5j0BJ9arYwoGVLLzI7KCnqAJ9iR2hm06Clss-tvX1Gtpb96K7mopH1K-h3K2PDaOFFlLCghAafgatg_720p__HD_lhe6zq.mp4",
+    audio: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764716017/tinywow_FDownloader.Net_AQNHBv6kyp8YS_0iRnwHuJjBCCVpZ5YD5j0BJ9arYwoGVLLzI7KCnqAJ9iR2hm06Clss-tvX1Gtpb96K7mopH1K-h3K2PDaOFFlL_86406731_npztky.mp3"
+     },
+       {
+    date: "October 12, 2025",
+    title: "Three (3) Areas of separation",
+    text: "Genesis 2:1-3,Galatians 3:13-14,Joshua 24:2; Hebrews 11:9-10",
+    verse: "Be separate from amongst them.",
+    duration: "10 min",
+    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764706444/GO_yvftwe.jpg",
+    video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764712332/FDownloader.Net_AQPRnA_WP1ZePXFFt-VEhmkB0J0MK6lTta264l9WPm_Av0beIXq8VMOYBDEtNVsJ4Wj3jIoh7zpHQo4qYk-Ki9No0n5v777HW7iislflq9C8lg_720p__HD_btutuh.mp4",
+    audio: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764713153/109b-8a23-41f0-8c3c-b277d21e0e27_b8ay9x.mp3"
+     },
 ];
 
 const LatestSermons = () => {
