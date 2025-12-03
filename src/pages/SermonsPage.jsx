@@ -8,11 +8,21 @@ import WhatsAppButton from "./WhatsappButton";
 
 const allSermonsData = [
 
+           {
+    date: "November 2, 2025",
+    title: "How To Live Supernaturally ",
+    text: "John 14:17-18;23-24",
+    verse: "Be washe in the blood",
+    duration: "10 min",
+    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764791015/GO2_btb2sb.jpg",
+    video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764790730/FDownloader.Net_AQOfcSrLAMHO3-euKssEXGORl6NAYwp2WjaKGMZuuAhdZjVHRj6sjDzgnoP-5xOxmeemSWl_3JY6Us8yTMtHLKerkT8Gj9Kd6hON3tF_8v9vYA_720p__HD_wdqpd7.mp4",
+    audio: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764790899/3613-b278-43ed-8bb4-6f10f637d08c_xpo3kc.mp3"
+     },
          {
     date: "October 24, 2025",
     title: "Angels Of Destiny",
     text: "Genesis 32:22-28",
-    verse: "Always be prepared.",
+    verse: "There's an angel for every situation.",
     duration: "10 min",
     img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764716265/Go1_nsdujn.jpg",
     video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764714525/FDownloader.Net_AQNHBv6kyp8YS_0iRnwHuJjBCCVpZ5YD5j0BJ9arYwoGVLLzI7KCnqAJ9iR2hm06Clss-tvX1Gtpb96K7mopH1K-h3K2PDaOFFlLCghAafgatg_720p__HD_lhe6zq.mp4",
