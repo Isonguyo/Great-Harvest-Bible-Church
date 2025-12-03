@@ -34,7 +34,7 @@ const allSermonsData = [
     text: "Genesis 2:1-3,Galatians 3:13-14,Joshua 24:2; Hebrews 11:9-10",
     verse: "Be separate from amongst them.",
     duration: "10 min",
-    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764706444/GO_yvftwe.jpg",
+    img: "https://res.cloudinary.com/dbozz4sgv/image/upload/v1764791749/go3_elirku.jpg",
     video: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764712332/FDownloader.Net_AQPRnA_WP1ZePXFFt-VEhmkB0J0MK6lTta264l9WPm_Av0beIXq8VMOYBDEtNVsJ4Wj3jIoh7zpHQo4qYk-Ki9No0n5v777HW7iislflq9C8lg_720p__HD_btutuh.mp4",
     audio: "https://res.cloudinary.com/dbozz4sgv/video/upload/v1764713153/109b-8a23-41f0-8c3c-b277d21e0e27_b8ay9x.mp3"
      },
