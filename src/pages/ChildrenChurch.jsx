@@ -14,7 +14,7 @@ const [lightboxImage, setLightboxImage] = useState(null);
 
 // Generate image paths
 // Generate image paths (NEWEST FIRST)
-const images = Array.from({ length: 54 }, (_, i) => `images/child${54 - i}.jpg`);
+const images = Array.from({ length: 57 }, (_, i) => `images/child${57 - i}.jpg`);
 const visibleImages = showAll ? images : images.slice(0, 5);
 
 // Open Lightbox
