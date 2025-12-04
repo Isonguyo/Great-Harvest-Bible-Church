@@ -11,7 +11,7 @@ const AdultMinistry = () => {
 const [showAll, setShowAll] = useState(false);
 const [lightboxImage, setLightboxImage] = useState(null);
 
-const images = Array.from({ length: 140 }, (_, i) => `images/ghbc${140 - i}.jpg`);const visibleImages = showAll ? images : images.slice(0, 5);
+const images = Array.from({ length: 149 }, (_, i) => `images/ghbc${149 - i}.jpg`);const visibleImages = showAll ? images : images.slice(0, 5);
 
 return (
 <section id="adult" className="adults-page">
